@@ -4,7 +4,7 @@ import { FavoriteService } from "./FavoriteService";
 
 export default function EpisodesList(props: any): JSX.Element[] {
   const { episodes, toggleFavAction, favorites, store } = props;
-  const {state, dispatch} = store
+  const { state, dispatch } = store;
   return episodes.map((episode: IEpisode) => {
     return (
       <section key={episode.id} className="episode-box">
@@ -17,7 +17,10 @@ export default function EpisodesList(props: any): JSX.Element[] {
           <div>
             Season: {episode.season} Number: {episode.number}
           </div>
-          <button type="button" onClick={() => toggleFavAction(state, dispatch, episode)}>
+          <button
+            type="button"
+            onClick={() => toggleFavAction(state, dispatch, episode)}
+          >
             {FavoriteService.episodeInFav(favorites, episode) ? "Unfav" : "Fav"}
           </button>
         </section>
