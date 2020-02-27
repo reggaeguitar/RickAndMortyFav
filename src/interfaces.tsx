@@ -7,7 +7,7 @@ export interface IState {
 
 export interface IAction {
   type: string;
-  payload: Array<IEpisode> | any;
+  payload: Array<IEpisode>;
 }
 
 export interface IEpisode {
@@ -31,6 +31,6 @@ export interface IEpisodeProps {
     state: IState,
     dispatch: Dispatch,
     episode: IEpisode
-  ) => IAction;
+  ) => void;
   favorites: Array<IEpisode>;
 }

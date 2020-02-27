@@ -14,12 +14,12 @@ export const fetchDataAction = async (dispatch: any) => {
 
 export const toggleFavAction = (
   state: IState,
-  dispatch: any,
-  episode: IEpisode | any
-): IAction => {
+  dispatch: React.Dispatch<IAction>,
+  episode: IEpisode
+): void => {
   let dispatchObj = {
     type: "add_fav",
-    payload: episode
+    payload: [episode]
   };
   if (FavoriteService.episodeInFav(state.favorites, episode)) {
     const favWithoutEpisode = state.favorites.filter(

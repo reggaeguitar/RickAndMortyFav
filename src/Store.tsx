@@ -13,7 +13,7 @@ function reducer(state: IState, action: IAction): IState {
     case "fetch_data":
       return { ...state, episodes: action.payload };
     case "add_fav":
-      return { ...state, favorites: [...state.favorites, action.payload] };
+      return { ...state, favorites: [...state.favorites, ...action.payload] };
     case "remove_fav":
       return { ...state, favorites: [...action.payload] };
     default:
