@@ -1,8 +1,8 @@
 import React from "react";
-import { IEpisode } from "./interfaces";
+import { IEpisode, IEpisodeProps } from "./interfaces";
 import { FavoriteService } from "./FavoriteService";
 
-export default function EpisodesList(props: any): JSX.Element[] {
+export default function EpisodesList(props: IEpisodeProps): JSX.Element[] {
   const { episodes, toggleFavAction, favorites, store } = props;
   const { state, dispatch } = store;
   return episodes.map((episode: IEpisode) => {
