@@ -2,7 +2,9 @@ import React, { FunctionComponent } from "react";
 import { Store } from "./Store";
 import { Link, RouteComponentProps } from "@reach/router";
 
-export const App: FunctionComponent<RouteComponentProps> = (props: React.PropsWithChildren<RouteComponentProps<{}>>): JSX.Element => {
+export const App: FunctionComponent<RouteComponentProps> = (
+  props: React.PropsWithChildren<RouteComponentProps<{}>>
+): JSX.Element => {
   const { state } = React.useContext(Store);
 
   return (
@@ -22,4 +24,4 @@ export const App: FunctionComponent<RouteComponentProps> = (props: React.PropsWi
       {props.children}
     </>
   );
-}
+};

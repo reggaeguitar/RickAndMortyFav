@@ -10,11 +10,11 @@ const initialState: IState = {
 const initialContext: IContext = {
   state: initialState,
   dispatch: () => {}
-}
+};
 
 interface IContext {
-  state: IState
-  dispatch: React.Dispatch<IAction>
+  state: IState;
+  dispatch: React.Dispatch<IAction>;
 }
 
 export const Store = React.createContext<IContext>(initialContext);
