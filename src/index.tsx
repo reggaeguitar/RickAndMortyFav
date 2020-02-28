@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
+import { App } from "./App";
 import { StoreProvider } from "./Store";
 import { Router, RouteComponentProps } from "@reach/router";
 import HomePage from "./HomePage";

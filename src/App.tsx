@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FunctionComponent } from "react";
 import { Store } from "./Store";
-import { Link } from "@reach/router";
+import { Link, RouteComponentProps } from "@reach/router";
 
-export default function App(props: any): JSX.Element {
+export const App: FunctionComponent<RouteComponentProps> = (props: React.PropsWithChildren<RouteComponentProps<{}>>): JSX.Element => {
   const { state } = React.useContext(Store);
 
   return (
