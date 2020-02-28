@@ -1,8 +1,9 @@
 import React from "react";
 import { Store } from "./Store";
 import { Link } from "@reach/router";
+import { IEpisodeProps } from "./interfaces/IEpisodeProps";
 
-export default function App(props: any): JSX.Element {
+export default function App(props: IEpisodeProps): JSX.Element {
   const { state } = React.useContext(Store);
 
   return (
@@ -19,7 +20,6 @@ export default function App(props: any): JSX.Element {
           </Link>
         </div>
       </header>
-      {props.children}
     </>
   );
 }

@@ -2,8 +2,9 @@ import { FavoriteService } from "./FavoriteService";
 import { IState } from "./interfaces/IState";
 import { IAction } from "./interfaces/IAction";
 import { IEpisode } from "./interfaces/IEpisode";
+import { Dispatch } from "./interfaces/Dispatch";
 
-export const fetchDataAction = async (dispatch: any) => {
+export const fetchDataAction = async (dispatch: Dispatch) => {
   const url =
     "https://api.tvmaze.com/singlesearch/shows?q=rick-&-morty&embed=episodes";
   const data = await fetch(url);
