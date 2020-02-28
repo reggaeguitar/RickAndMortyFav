@@ -1,5 +1,7 @@
-import { IState, IEpisode, IAction } from "./interfaces";
 import { FavoriteService } from "./FavoriteService";
+import { IState } from "./interfaces/IState";
+import { IAction } from "./interfaces/IAction";
+import { IEpisode } from "./interfaces/IEpisode";
 
 export const fetchDataAction = async (dispatch: any) => {
   const url =

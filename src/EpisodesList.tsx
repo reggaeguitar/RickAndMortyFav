@@ -1,6 +1,7 @@
 import React from "react";
-import { IEpisode, IEpisodeProps } from "./interfaces";
 import { FavoriteService } from "./FavoriteService";
+import { IEpisodeProps } from "./interfaces/IEpisodeProps";
+import { IEpisode } from "./interfaces/IEpisode";
 
 export default function EpisodesList(props: IEpisodeProps): JSX.Element[] {
   const { episodes, toggleFavAction, favorites, store } = props;

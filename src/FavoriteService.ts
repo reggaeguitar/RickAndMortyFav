@@ -1,4 +1,4 @@
-import { IEpisode } from "./interfaces";
+import { IEpisode } from "./interfaces/IEpisode";
 
 export class FavoriteService {
   static episodeInFav = (favorites: IEpisode[], episode: IEpisode): boolean =>
