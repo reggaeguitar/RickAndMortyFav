@@ -1,6 +1,7 @@
 import React from "react";
 import { IState } from "./interfaces/IState";
 import { IAction } from "./interfaces/IAction";
+import { IContext } from "./interfaces/IContext"
 
 const initialState: IState = {
   episodes: [],
@@ -11,11 +12,6 @@ const initialContext: IContext = {
   state: initialState,
   dispatch: () => {}
 };
-
-interface IContext {
-  state: IState;
-  dispatch: React.Dispatch<IAction>;
-}
 
 export const Store = React.createContext<IContext>(initialContext);
 
